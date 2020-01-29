@@ -9,6 +9,8 @@ interface Todo {
   id: string;
   text: string;
   completed: boolean;
+  notes: string[];
+  deadline?: Date;
 }
 
 @Injectable({
@@ -45,6 +47,7 @@ export class TodosService {
         id: uuidv4(),
         text,
         completed: false,
+        notes: [],
       },
     ];
   }
@@ -62,6 +65,34 @@ export class TodosService {
       currentTodos[currentTodoIndex] = {
         ...currentTodo,
         completed,
+      };
+      this.todos = [...currentTodos];
+    }
+  }
+
+  setNotes(id: string, notes: string[]) {
+    const currentTodos = this.todos;
+    const currentTodo = currentTodos.find(todo => todo.id === id);
+
+    if (currentTodo) {
+      const currentTodoIndex = currentTodos.indexOf(currentTodo);
+      currentTodos[currentTodoIndex] = {
+        ...currentTodo,
+        notes,
+      };
+      this.todos = [...currentTodos];
+    }
+  }
+
+  setDeadline(id: string, deadline: Date) {
+    const currentTodos = this.todos;
+    const currentTodo = currentTodos.find(todo => todo.id === id);
+
+    if (currentTodo) {
+      const currentTodoIndex = currentTodos.indexOf(currentTodo);
+      currentTodos[currentTodoIndex] = {
+        ...currentTodo,
+        deadline,
       };
       this.todos = [...currentTodos];
     }
