@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { AppMaterialModule } from '../app-material/app-material.module';
+// import { AppMaterialModule } from '../app-material/app-material.module';
 
 @NgModule({
   imports: [
-    AppMaterialModule,
+    // AppMaterialModule,
     CommonModule,
     HttpClientModule,
     RouterModule,

@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 const uuidv4 = require('uuid/v4');
 
-interface Todo {
+export interface Todo {
   id: string;
   text: string;
   completed: boolean;
@@ -30,6 +30,10 @@ export class TodosService {
   // we need to import map though
   readonly completedTodos$ = this.todos$.pipe(
     map(todos => todos.filter(todo => todo.completed))
+  );
+
+  readonly incompleteTodos$ = this.todos$.pipe(
+    map(todos => todos.filter(todo => !todo.completed))
   );
 
   private get todos(): Todo[] {

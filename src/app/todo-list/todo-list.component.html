@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h2>Todos</h2></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list role="list">
+      <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

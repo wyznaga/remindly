@@ -1,0 +1,9 @@
+mat-form-field, mat-form-field-infix {
+  min-width: 75%;
+}
+
+mat-card {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

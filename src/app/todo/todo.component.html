@@ -1,0 +1,7 @@
+<mat-list-item [class.copmleted]="this.completed | async">
+  <!-- checkbox labels do *not* wrap in Material Design, by default, intended behavior
+  workarounds are complex and fickle
+  not attempting
+  source: https://github.com/angular/components/issues/8416 -->
+  <mat-checkbox [checked]="this.todo?.completed" (change)="this.onCheckboxChange()">{{ todo?.text }}</mat-checkbox>
+</mat-list-item>

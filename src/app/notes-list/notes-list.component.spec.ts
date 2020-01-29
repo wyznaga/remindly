@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoPageComponent } from './todo-page.component';
+import { NotesListComponent } from './notes-list.component';
 
-describe('TodoPageComponent', () => {
-  let component: TodoPageComponent;
-  let fixture: ComponentFixture<TodoPageComponent>;
+describe('NotesListComponent', () => {
+  let component: NotesListComponent;
+  let fixture: ComponentFixture<NotesListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoPageComponent ]
+      declarations: [ NotesListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TodoPageComponent);
+    fixture = TestBed.createComponent(NotesListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
