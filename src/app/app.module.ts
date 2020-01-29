@@ -15,11 +15,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 import { AppNavComponent } from './app-nav/app-nav.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NotesPageComponent } from './notes-page/notes-page.component';
+import { SettingsPageComponent } from './settings-page/settings-page.component';
+import { TodosPageComponent } from './todos-page/todos-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppNavComponent
+    AppNavComponent,
+    NotesPageComponent,
+    SettingsPageComponent,
+    TodosPageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +38,7 @@ import { AppNavComponent } from './app-nav/app-nav.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
