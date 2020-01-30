@@ -13,8 +13,6 @@ export class CompletedTodosComponent implements OnInit {
 
   @Input() todos: Todo[];
 
-  @Output() todoChanged = new EventEmitter<Todo>();
-
   constructor() { }
 
   ngOnInit() {
